@@ -8,7 +8,7 @@ title = "首页"
 
 ### 🔥 热门推荐
 
-- [AI工具合租省钱指南：2026年最新方案](/posts/ai-tools-saving-guide/) — 省下80%订阅费
+- [AI工具合租省钱指南：2026年最新方案]({{< ref "posts/ai-tools-saving-guide" >}}) — 省下80%订阅费
 - 更多文章持续更新中……
 
 ---
