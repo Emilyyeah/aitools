@@ -1,10 +1,10 @@
 baseURL = "https://Emilyyeah.github.io/aitools/"
 languageCode = "zh-CN"
-title = "AI工具导航与评测"
+title = "AI工具使用指南"
 theme = "minimal"
 
 [params]
-  description = "发现最好用的AI工具，提升你的工作效率"
+  description = "ChatGPT、Midjourney等AI工具在国内的使用教程与省钱方案"
   author = "AI工具导航"
 
 [menu]

@@ -92,6 +92,22 @@ img{max-width:100%;height:auto}
 .footer-bottom{text-align:center;margin-top:16px;padding-top:14px;border-top:1px solid var(--c-border-light);font-size:.78rem;color:var(--c-text-lighter)}
 .footer-bottom a{color:var(--c-text-light)}
 
+/* Problem cards */
+.problem-card{background:var(--c-white);border:1px solid var(--c-border);border-radius:var(--radius);padding:24px 28px;display:flex;align-items:center;gap:20px;transition:all .2s;color:var(--c-text)!important;text-decoration:none}
+.problem-card:hover{border-color:#93c5fd;box-shadow:var(--shadow-md);transform:translateY(-1px)}
+.problem-num{font-size:1.5rem;font-weight:800;color:#93c5fd;flex-shrink:0;width:40px}
+.problem-card h3{font-size:1rem;font-weight:600;margin-bottom:4px;color:var(--c-text)}
+.problem-card p{font-size:.85rem;color:var(--c-text-light);line-height:1.5;margin:0}
+.problem-arrow{font-size:1.2rem;color:#cbd5e1;flex-shrink:0;margin-left:auto;transition:all .15s}
+.problem-card:hover .problem-arrow{color:var(--c-primary);transform:translateX(3px)}
+
+/* Tip box in articles */
+.tip-box{background:#f0f9ff;border:1px solid #bae6fd;border-radius:10px;padding:20px 24px;margin:24px 0}
+.tip-box .tip-title{font-weight:700;font-size:.95rem;margin-bottom:6px;color:#0369a1}
+.tip-box p{font-size:.92rem;color:var(--c-text-light);margin-bottom:12px}
+.tip-box .tip-link{display:inline-block;padding:8px 18px;background:var(--c-primary);color:#fff!important;border-radius:8px;font-weight:600;font-size:.88rem;transition:all .15s}
+.tip-box .tip-link:hover{background:var(--c-primary-dark);color:#fff!important}
+
 @media(max-width:640px){
   .hero h1{font-size:1.5rem}
   .tools-grid{grid-template-columns:1fr}

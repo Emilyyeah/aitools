@@ -1,42 +1,36 @@
 {{ define "main" }}
 <section class="hero">
   <div class="container">
-    <h1>用最少的钱，用上最好的 <span class="accent">AI 工具</span></h1>
-    <p class="subtitle">精选优质合租平台与AI订阅方案，全部经过真实使用验证</p>
+    <h1>ChatGPT 国内使用完全指南</h1>
+    <p class="subtitle">不翻墙怎么注册？Plus会员怎么买？合租还是独享？<br>你遇到的问题，这里都有答案。</p>
   </div>
 </section>
 
 <section class="container">
-  <div class="section-title">🛠️ 推荐工具</div>
+  <div class="section-title">🤔 你遇到的问题</div>
   <div class="tools-grid">
-  {{ range .Site.Data.tools }}
-    <div class="tool-card {{ if eq .name "银河录像局" }}featured{{ end }}">
-      {{ if .badge }}<span class="badge {{ .badgeClass }}">{{ .badge }}</span>{{ end }}
-      <div class="tool-icon {{ .iconColor }}">{{ .icon }}</div>
-      <h3>{{ .name }}</h3>
-      <div class="tool-domain">{{ .domain }}</div>
-      <p class="tool-desc">{{ .desc }}</p>
-      <ul class="tool-features">
-        {{ range .features }}
-        <li>{{ . }}</li>
-        {{ end }}
-      </ul>
-      <div class="tool-price"><strong>{{ .price }}</strong>{{ .priceLabel }}</div>
-      <a href="{{ .link }}" class="btn btn-{{ .linkStyle }}" target="_blank" rel="nofollow">{{ .linkText }}</a>
-    </div>
-  {{ end }}
+    {{ range .Site.Data.problems }}
+    <a href="{{ .link }}" class="problem-card">
+      <div class="problem-num">{{ .num }}</div>
+      <div>
+        <h3>{{ .title }}</h3>
+        <p>{{ .desc }}</p>
+      </div>
+      <span class="problem-arrow">→</span>
+    </a>
+    {{ end }}
   </div>
 </section>
 
-<section class="container">
+<section class="container" style="padding-bottom:48px">
   <div class="section-title">
-    📝 最新评测
+    📝 最新文章
     {{ with .Site.GetPage "/posts" }}
-    <a href="{{ .RelPermalink }}" style="font-size:.82rem;font-weight:400;margin-left:auto">查看全部 →</a>
+    <a href="{{ .RelPermalink }}" style="font-size:.82rem;font-weight:400;margin-left:auto">全部文章 →</a>
     {{ end }}
   </div>
   <div class="article-mini-list">
-  {{ range first 4 (where .Site.RegularPages "Section" "posts") }}
+  {{ range first 5 (where .Site.RegularPages "Section" "posts") }}
     <a href="{{ .RelPermalink }}" class="article-mini">
       <div class="am-info">
         <div class="am-title">{{ .Title }}</div>
