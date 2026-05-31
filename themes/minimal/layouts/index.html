@@ -2,21 +2,27 @@
 <section class="hero">
   <div class="container">
     <h1>海外AI工具 · 国内使用指南</h1>
-    <p class="subtitle">解决网络、注册、支付三层障碍。每个工具一份完整教程，不绕弯子。</p>
+    <p class="subtitle">选工具 → 选你的问题 → 看解决方案</p>
   </div>
 </section>
 
 <section class="container">
   <div class="tools-grid">
   {{ range .Site.Data.tools }}
-    <a href="{{ .link }}" class="tool-card">
-      <div class="tool-icon-wrap">{{ .icon }}</div>
-      <div class="tool-info">
-        <h3>{{ .name }}</h3>
-        <p>{{ .desc }}</p>
+    <details class="tool-details">
+      <summary class="tool-summary">
+        <span class="tool-icon-wrap">{{ .icon }}</span>
+        <div class="tool-summary-text">
+          <h3>{{ .name }}</h3>
+          <p>{{ .desc }}</p>
+        </div>
+      </summary>
+      <div class="tool-subitems">
+        {{ range .items }}
+        <a href="{{ .link }}" class="tool-subitem">{{ .q }}</a>
+        {{ end }}
       </div>
-      {{ if .highlight }}<span class="tool-tag">{{ .highlight }}</span>{{ end }}
-    </a>
+    </details>
   {{ end }}
   </div>
 </section>

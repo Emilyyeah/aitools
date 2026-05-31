@@ -2,43 +2,60 @@
   {
     "name": "ChatGPT",
     "icon": "🤖",
-    "desc": "5种方案，从官直到合租，按你的情况选",
-    "link": "/aitools/posts/chatgpt-guide/",
-    "highlight": "覆盖最全"
+    "desc": "最全面的海外AI使用方案",
+    "items": [
+      {"q": "从零开始，怎么用上ChatGPT？", "link": "/aitools/posts/chatgpt-beginner/"},
+      {"q": "有账号，怎么付Plus会员费？", "link": "/aitools/posts/chatgpt-payment/"},
+      {"q": "轻度使用，怎么最省钱？", "link": "/aitools/posts/chatgpt-sharing/"},
+      {"q": "我是开发者，怎么调API？", "link": "/aitools/posts/chatgpt-api/"}
+    ]
   },
   {
     "name": "GPT Image 2",
     "icon": "🎨",
-    "desc": "不翻墙免费用的AI生图天花板",
-    "link": "/aitools/posts/gpt-image2-guide/",
-    "highlight": "2026年4月新发布"
+    "desc": "2026年4月新发布，AI生图天花板",
+    "items": [
+      {"q": "不花钱，免费试用怎么搞？", "link": "/aitools/posts/gpt-image2-free/"},
+      {"q": "已有ChatGPT Plus，官方怎么用？", "link": "/aitools/posts/gpt-image2-official/"},
+      {"q": "批量生图，API怎么接？", "link": "/aitools/posts/gpt-image2-api/"}
+    ]
   },
   {
     "name": "ChatGPT Plus 支付",
     "icon": "💳",
-    "desc": "卡被拒？4种方式绕过海外支付",
-    "link": "/aitools/posts/payment-guide/",
-    "highlight": ""
+    "desc": "卡被拒的四种解决方案",
+    "items": [
+      {"q": "我有iPhone，用Apple礼品卡怎么付？", "link": "/aitools/posts/payment-apple/"},
+      {"q": "不想折腾，找人代充怎么选？", "link": "/aitools/posts/payment-recharge/"},
+      {"q": "不想管支付，用聚合平台跳过？", "link": "/aitools/posts/payment-skip/"}
+    ]
   },
   {
     "name": "NanoBanana 2",
     "icon": "🍌",
-    "desc": "免费渠道最多，中文最好，秒级出图",
-    "link": "/aitools/posts/nanobanana2-guide/",
-    "highlight": ""
+    "desc": "免费渠道最多，秒级出图",
+    "items": [
+      {"q": "免费画图，有什么渠道？", "link": "/aitools/posts/nanobanana2-free/"},
+      {"q": "和GPT Image 2比，该选哪个？", "link": "/aitools/posts/nanobanana2-compare/"}
+    ]
   },
   {
     "name": "Claude",
     "icon": "📝",
-    "desc": "开发者首选，Claude Code编程利器",
-    "link": "/aitools/posts/claude-guide/",
-    "highlight": ""
+    "desc": "代码能力顶级，开发者首选",
+    "items": [
+      {"q": "不注册，怎么快速体验Claude？", "link": "/aitools/posts/claude-try/"},
+      {"q": "开发者，API和Claude Code怎么用？", "link": "/aitools/posts/claude-dev/"},
+      {"q": "Claude和ChatGPT，我该用哪个？", "link": "/aitools/posts/claude-compare/"}
+    ]
   },
   {
     "name": "Gemini",
     "icon": "🔮",
     "desc": "免费额度最大方，原生多模态",
-    "link": "/aitools/posts/gemini-guide/",
-    "highlight": ""
+    "items": [
+      {"q": "免费体验，怎么用？", "link": "/aitools/posts/gemini-free/"},
+      {"q": "和ChatGPT、Claude有什么区别？", "link": "/aitools/posts/gemini-compare/"}
+    ]
   }
 ]
