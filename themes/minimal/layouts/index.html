@@ -1,4 +1,47 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
+<section class="hero">
+  <div class="container">
+    <h1>用最少的钱，用上最好的 AI</h1>
+    <p class="subtitle">{{ .Site.Params.description }}</p>
+    <div class="hero-meta">
+      <span class="hero-badge"><span class="dot"></span>每周更新</span>
+      <span class="hero-badge">🛠️ 真实评测</span>
+      <span class="hero-badge">💰 独家优惠</span>
+    </div>
+  </div>
+</section>
+
+<section class="container" style="padding-bottom:40px">
+  <div class="section-header">
+    <h2>📝 最新文章</h2>
+    {{ with .Site.GetPage "/posts" }}
+    <a href="{{ .RelPermalink }}">查看全部 →</a>
+    {{ end }}
+  </div>
+  <div class="post-grid">
+  {{ range first 6 (where .Site.RegularPages "Section" "posts") }}
+    <article class="post-card">
+      {{ with .Params.categories }}{{ range first 1 . }}<span class="card-category">{{ . }}</span>{{ end }}{{ end }}
+      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      <p class="card-excerpt">{{ with .Description }}{{ . }}{{ else }}{{ .Summary | truncate 120 }}{{ end }}</p>
+      <div class="card-meta">
+        <span>{{ .Date.Format "2006-01-02" }}</span>
+        <span>{{ .ReadingTime }} 分钟阅读</span>
+      </div>
+    </article>
+  {{ end }}
+  </div>
+</section>
+
+{{ with .Content }}
+<section class="container" style="padding-bottom:40px">
+  <div class="cta-box">
+    <h3>{{ $.Site.Params.description }}</h3>
+    <p>每一篇推荐都经过真实使用验证，不是AI生成的通稿。</p>
+    {{ with $.Site.GetPage "/posts" }}
+    <a href="{{ .RelPermalink }}" class="cta-btn cta-btn-large">浏览全部文章</a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
 {{ end }}

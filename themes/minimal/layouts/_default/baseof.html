@@ -3,27 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <a href="{{ "/" | relLangURL }}" class="logo">{{ .Site.Title }}</a>
-      <nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="{{ "/" | relLangURL }}" class="site-logo">
+        <span class="icon">AI</span>
+        {{ .Site.Title }}
+      </a>
+      <nav class="main-nav">
         {{ range .Site.Menus.main }}
-        <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+        <a href="{{ .URL | relLangURL }}" {{ if $.IsMenuCurrent "main" . }}class="active"{{ end }}>{{ .Name }}</a>
         {{ end }}
       </nav>
     </div>
   </header>
-  <main class="container">
+  <main>
     {{ block "main" . }}{{ end }}
   </main>
-  <footer>
+  <footer class="site-footer">
     <div class="container">
-      <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}</p>
+      <div class="footer-inner">
+        <div class="footer-brand">{{ .Site.Title }}</div>
+        <div class="footer-links">
+          {{ range .Site.Menus.main }}
+          <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+          {{ end }}
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; {{ now.Format "2006" }} {{ .Site.Title }} — 发现实用的AI工具与优惠
+      </div>
     </div>
   </footer>
 </body>

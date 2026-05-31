@@ -3,6 +3,7 @@ title = "AI工具合租省钱指南：2026年最新流媒体与AI会员共享方
 date = 2026-05-31
 draft = false
 description = "Netflix、ChatGPT Plus、Midjourney等AI和流媒体工具如何以最低价格使用？这份合租指南帮你省下80%的订阅费用。"
+categories = ["省钱攻略"]
 +++
 
 ## 为什么要合租AI工具？
