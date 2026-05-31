@@ -1,0 +1,18 @@
+baseURL = "https://Emilyyeah.github.io/"
+languageCode = "zh-CN"
+title = "AI工具导航与评测"
+theme = "minimal"
+
+[params]
+  description = "发现最好用的AI工具，提升你的工作效率"
+  author = "AI工具导航"
+
+[menu]
+  [[menu.main]]
+    name = "首页"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "文章"
+    url = "/posts/"
+    weight = 2
