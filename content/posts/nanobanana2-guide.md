@@ -7,14 +7,11 @@ description = "Google的轻量AI生图模型。免费渠道最多，中文最好
 
 ## 先选你的问题
 
-<div class="question-list">
-
 * [我就想免费画几张图试试](#free)
 * [我有Google账号，想用官方渠道](#official)
 * [NanoBanana 2 和 GPT Image 2 哪个适合我？](#compare)
 * [我是开发者，需要API调用](#api)
 
-</div>
 
 ---
 
@@ -64,4 +61,3 @@ description = "Google的轻量AI生图模型。免费渠道最多，中文最好
 * [GPT Image 2 教程](/aitools/posts/gpt-image2-guide/)
 * [Gemini 使用指南](/aitools/posts/gemini-guide/)
 
-</div>

@@ -7,14 +7,11 @@ description = "卡被拒？按你的支付习惯选方案。Apple礼品卡、代
 
 ## 先选你的问题
 
-<div class="question-list">
-
 * [我有iPhone，愿意搞一个美区Apple ID](#apple)
 * [我不想自己折腾，找人帮我付](#recharge)
 * [我想自己操作，搞一张虚拟卡](#virtual)
 * [我不想管支付的事，直接用聚合平台](#skip)
 
-</div>
 
 ---
 
@@ -84,4 +81,3 @@ description = "卡被拒？按你的支付习惯选方案。Apple礼品卡、代
 * [ChatGPT 使用指南](/aitools/posts/chatgpt-guide/)
 * [Claude 使用指南](/aitools/posts/claude-guide/)
 
-</div>

@@ -15,15 +15,12 @@ questions = [
 
 ## 先选你的问题
 
-<div class="question-list">
-
 * [我完全不知道怎么开始，想从零用上ChatGPT](#direct)
 * [我有账号，但付不了Plus会员费](#recharge)
 * [我什么都不想折腾，打开就能用就行](#platform)
 * [我用得不多，想最省钱](#sharing)
 * [我是开发者，需要API调用](#api)
 
-</div>
 
 ---
 
@@ -115,4 +112,3 @@ questions = [
 * [ChatGPT Plus 支付方案](/aitools/posts/payment-guide/)
 * [Claude 国内使用指南](/aitools/posts/claude-guide/)
 
-</div>
