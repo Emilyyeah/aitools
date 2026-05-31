@@ -1,20 +1,15 @@
 {{ define "main" }}
-<div class="container">
+<div class="article-container">
+  <a href="/aitools/" class="back-link">← 返回首页</a>
   <header class="article-header">
     <h1>{{ .Title }}</h1>
   </header>
-  <div class="post-grid">
-  {{ range .Pages }}
-    <article class="post-card">
-      {{ with .Params.categories }}{{ range first 1 . }}<span class="card-category">{{ . }}</span>{{ end }}{{ end }}
-      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-      <p class="card-excerpt">{{ with .Description }}{{ . }}{{ else }}{{ .Summary | truncate 120 }}{{ end }}</p>
-      <div class="card-meta">
-        <span>{{ .Date.Format "2006-01-02" }}</span>
-        <span>{{ .ReadingTime }} 分钟阅读</span>
-      </div>
-    </article>
-  {{ end }}
+  <div class="article-body">
+    {{ range .Pages }}
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <p style="color:var(--c-text-light);font-size:.9rem">{{ .Description }}</p>
+    <p style="margin-bottom:24px"><a href="{{ .RelPermalink }}">阅读 →</a></p>
+    {{ end }}
   </div>
 </div>
 {{ end }}

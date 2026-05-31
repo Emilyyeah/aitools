@@ -15,9 +15,7 @@
         {{ .Site.Title }}
       </a>
       <nav class="main-nav">
-        {{ range .Site.Menus.main }}
-        <a href="{{ .URL  | absLangURL }}" {{ if $.IsMenuCurrent "main" . }}class="active"{{ end }}>{{ .Name }}</a>
-        {{ end }}
+        <a href="/aitools/">首页</a>
       </nav>
     </div>
   </header>
@@ -26,17 +24,7 @@
   </main>
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-inner">
-        <div class="footer-brand">{{ .Site.Title }}</div>
-        <div class="footer-links">
-          {{ range .Site.Menus.main }}
-          <a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
-          {{ end }}
-        </div>
-      </div>
-      <div class="footer-bottom">
-        &copy; {{ now.Format "2006" }} {{ .Site.Title }} — 发现实用的AI工具与优惠
-      </div>
+      <p>海外AI工具国内使用指南 · 不卖产品，只讲方案</p>
     </div>
   </footer>
 </body>

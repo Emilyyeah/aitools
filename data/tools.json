@@ -1,0 +1,44 @@
+[
+  {
+    "name": "ChatGPT",
+    "icon": "🤖",
+    "desc": "5种方案，从官直到合租，按你的情况选",
+    "link": "/aitools/posts/chatgpt-guide/",
+    "highlight": "覆盖最全"
+  },
+  {
+    "name": "GPT Image 2",
+    "icon": "🎨",
+    "desc": "不翻墙免费用的AI生图天花板",
+    "link": "/aitools/posts/gpt-image2-guide/",
+    "highlight": "2026年4月新发布"
+  },
+  {
+    "name": "ChatGPT Plus 支付",
+    "icon": "💳",
+    "desc": "卡被拒？4种方式绕过海外支付",
+    "link": "/aitools/posts/payment-guide/",
+    "highlight": ""
+  },
+  {
+    "name": "NanoBanana 2",
+    "icon": "🍌",
+    "desc": "免费渠道最多，中文最好，秒级出图",
+    "link": "/aitools/posts/nanobanana2-guide/",
+    "highlight": ""
+  },
+  {
+    "name": "Claude",
+    "icon": "📝",
+    "desc": "开发者首选，Claude Code编程利器",
+    "link": "/aitools/posts/claude-guide/",
+    "highlight": ""
+  },
+  {
+    "name": "Gemini",
+    "icon": "🔮",
+    "desc": "免费额度最大方，原生多模态",
+    "link": "/aitools/posts/gemini-guide/",
+    "highlight": ""
+  }
+]

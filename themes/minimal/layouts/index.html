@@ -1,42 +1,21 @@
 {{ define "main" }}
 <section class="hero">
   <div class="container">
-    <h1>ChatGPT 国内使用完全指南</h1>
-    <p class="subtitle">不翻墙怎么注册？Plus会员怎么买？合租还是独享？<br>你遇到的问题，这里都有答案。</p>
+    <h1>海外AI工具 · 国内使用指南</h1>
+    <p class="subtitle">解决网络、注册、支付三层障碍。每个工具一份完整教程，不绕弯子。</p>
   </div>
 </section>
 
 <section class="container">
-  <div class="section-title">🤔 你遇到的问题</div>
   <div class="tools-grid">
-    {{ range .Site.Data.problems }}
-    <a href="{{ .link }}" class="problem-card">
-      <div class="problem-num">{{ .num }}</div>
-      <div>
-        <h3>{{ .title }}</h3>
+  {{ range .Site.Data.tools }}
+    <a href="{{ .link }}" class="tool-card">
+      <div class="tool-icon-wrap">{{ .icon }}</div>
+      <div class="tool-info">
+        <h3>{{ .name }}</h3>
         <p>{{ .desc }}</p>
       </div>
-      <span class="problem-arrow">→</span>
-    </a>
-    {{ end }}
-  </div>
-</section>
-
-<section class="container" style="padding-bottom:48px">
-  <div class="section-title">
-    📝 最新文章
-    {{ with .Site.GetPage "/posts" }}
-    <a href="{{ .RelPermalink }}" style="font-size:.82rem;font-weight:400;margin-left:auto">全部文章 →</a>
-    {{ end }}
-  </div>
-  <div class="article-mini-list">
-  {{ range first 5 (where .Site.RegularPages "Section" "posts") }}
-    <a href="{{ .RelPermalink }}" class="article-mini">
-      <div class="am-info">
-        <div class="am-title">{{ .Title }}</div>
-        <div class="am-meta">{{ .Date.Format "2006-01-02" }} · {{ .ReadingTime }}分钟</div>
-      </div>
-      <span class="am-arrow">→</span>
+      {{ if .highlight }}<span class="tool-tag">{{ .highlight }}</span>{{ end }}
     </a>
   {{ end }}
   </div>
