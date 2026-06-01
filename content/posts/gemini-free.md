@@ -2,83 +2,79 @@
 title = "Gemini 免费体验"
 date = 2026-05-31
 draft = false
-description = "免费额度最大方的海外AI。不翻墙、不用Google账号，多种方式直接用上Gemini 3.1 Pro。"
+description = "免费额度最大方的海外AI。KULAAI、蓝鲸AI、RskAi等聚合平台直接切换Gemini，完全免费。"
 +++
 
-## Gemini 的优势
+## Gemini 的核心优势
 
-Google 的 Gemini 是最容易被国内用户忽略的好东西：
+Google 的 Gemini 3.1 Pro 是最容易被低估的好东西：
 
-- **免费额度最大方**：Gemini Flash API 每分钟 60 次免费调用，比其他家都慷慨
-- **100 万 token 上下文**：一次塞进整本书，分析超长文档无敌
-- **原生多模态**：直接处理图片、音频、视频，不需要额外插件
-- **免费版已经很强**：Gemini Flash 轻量版已经足够日常使用
-
-但一个关键障碍：官方入口 gemini.google.com 需要 Google 账号 + 能访问 Google 服务。下面是不用 Google 账号的方案。
+- **免费额度最大方**：Gemini Flash API 每分钟 60 次免费调用
+- **100 万 token 上下文**：一口气塞进整本书
+- **原生多模态**：直接处理图片、音频、视频
+- **免费版已经很强**：Gemini Flash 日常使用完全够
 
 ---
 
-## 方式一：聚合平台（最方便）
+## 聚合平台直接用 Gemini（零门槛）
 
-和用 ChatGPT 聚合平台一样，绝大多数聚合平台也提供 Gemini 模型。
+以下平台都内置了 Gemini 模型，不用 Google 账号，不用翻墙。
 
-**操作**：
+### KULAAI
 
-1. 注册任意国内 AI 聚合平台
-2. 在模型列表里找 Gemini（通常有 3.1 Pro、Flash、2.5 Pro 等选项）
-3. Gemini Flash 经常放在**免费区**（因为 Google 官方 API 免费额度大）
-4. 选中后直接对话
+- 模型：Gemini 3.1 Pro + Flash，与 GPT + Claude + Grok 同平台切换
+- 价格：**Gemini Flash 免费**（每日重置额度），Pro 需付费
+- 特色：文件上传 + 联网搜索 + 多模型对比
+- 适合：想同时用 Gemini + ChatGPT + Claude 的用户
 
-**费用**：Gemini Flash 在大多数聚合平台上**完全免费**。Gemini Pro 可能需要付费，但也不贵。
+### 蓝鲸AI
+
+- 模型：Gemini 系列
+- 价格：免费额度
+- 特色：界面极简，响应快
+- 适合：只想用 Gemini 聊天，不想折腾
+
+### RskAi
+
+- 模型：Gemini 系列
+- 价格：较大免费额度
+- 适合：免费额度需求大的用户
 
 ---
 
-## 方式二：Google AI Studio（需要网络）
+## Google AI Studio（官方，需网络）
 
-如果你有能访问 Google 服务的网络环境，这个是最佳选择：
+如果你有能访问 Google 服务的网络环境：
 
-1. 打开 [aistudio.google.com](https://aistudio.google.com)
+1. 打开 aistudio.google.com
 2. 用 Google 账号登录
-3. 选择 Gemini 模型，直接在网页里对话和测试
-4. API 免费额度：每分钟 60 次请求，完全免费
+3. 选择 Gemini 模型，直接在网页对话和测试
+4. API 免费额度：每分钟 60 次，完全免费
 
-**适合**：有 Google 账号 + 稳定网络环境的用户。开发者首选。
-
----
-
-## 方式三：API 中转（开发者）
-
-国内 API 中转平台通常免费提供 Gemini Flash API（它们吃 Google 的免费额度）。
-
-👉 中转平台的使用方式和 ChatGPT API 中转一致，改一下 base_url 即可。
+**适合**：有 Google 账号 + 稳定网络环境的开发者。
 
 ---
 
 ## Gemini 什么场景最合适
 
-- **分析超长文档**：100 万 token 上下文，适合阅读理解整本书、整份合同、整个项目代码库
-- **处理视频/音频**：原生多模态，直接分析视频内容、转录翻译
-- **数据分析**：连接 Google Sheets，直接在表格里做 AI 分析
-- **当免费备选**：ChatGPT 限流/付费不想续的时候，Gemini Flash 永远免费可用
+- **分析超长文档**：100 万 token 上下文，一次读完整本书/合同/代码库
+- **处理视频/音频**：上传视频文件直接分析内容、生成字幕、提取要点
+- **数据分析**：连接 Google Sheets 做 AI 分析
+- **当免费备选**：ChatGPT 限流时，Gemini Flash 永远免费可用
 
 ---
 
-## Gemini vs ChatGPT vs Claude
+## Gemini vs ChatGPT vs Claude 速览
 
 | | Gemini | ChatGPT | Claude |
 |:---|:---|:---|:---|
 | 免费额度 | 🥇 最多 | 🥈 有免费版 | 🥉 几乎没有 |
-| 多模态 | 🥇 原生全模态 | 🥈 强（图像为主） | 🥉 偏文本 |
-| 上下文长度 | 🥇 100万token | 🥈 128K-1M | 🥈 200K |
-| 代码能力 | ⭐⭐⭐ | ⭐⭐⭐⭐ | 🥇 |
-| 中文能力 | ⭐⭐⭐ | 🥇 | ⭐⭐⭐ |
+| 多模态 | 🥇 原生全模态 | 🥈 强 | 🥉 偏文本 |
+| 上下文 | 🥇 100万token | 🥈 128K-1M | 🥈 200K |
+| 代码 | ⭐⭐⭐ | ⭐⭐⭐⭐ | 🥇 |
+| 国内聚合 | ✅ KULAAI/蓝鲸/RskAi | ✅ 同上 | ✅ 同上 |
 
-**选哪个**：
-
-- 免费体验 + 多功能 → Gemini Flash
-- 日常对话 + 中文 → ChatGPT
-- 写代码 → Claude
-- 三个都要 → 聚合平台一个账号全能用
+**选哪个**：三个在聚合平台都能用。不纠结——按场景切换。
 
 <div class="cross-links">
 
