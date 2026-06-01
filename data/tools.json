@@ -3,97 +3,62 @@
     "name": "ChatGPT",
     "icon": "🤖",
     "desc": "最全面 · 5分钟上手",
-    "recommend": {
-      "path": "聚合平台 KULAAI",
-      "price": "免费额度（每日重置）→ 付费 ¥30/月",
-      "note": "含 GPT-5 + Claude + Gemini + Grok，一个平台全搞定",
-      "url": "https://kulaai.cn"
-    },
-    "links": [
-      {"text": "👉 直接打开 KULAAI 开始用", "url": "https://kulaai.cn", "external": true},
-      {"text": "📖 需要注册OpenAI官方账号？接码教程", "url": "/aitools/posts/chatgpt-register/"},
-      {"text": "💳 想开Plus/Pro会员？支付全攻略", "url": "/aitools/posts/chatgpt-payment/"}
+    "items": [
+      {"text": "KULAAI 聚合平台（免费·多模型）", "url": "https://kulaai.cn"},
+      {"text": "蓝鲸AI（极简·每日免费）", "url": "https://lanjingai.org"},
+      {"text": "📖 注册 OpenAI 官方账号", "url": "/aitools/posts/chatgpt-register/"},
+      {"text": "💳 Plus/Pro 支付教程", "url": "/aitools/posts/chatgpt-payment/"}
     ]
   },
   {
     "name": "Claude",
     "icon": "📝",
     "desc": "代码最强 · 开发者首选",
-    "recommend": {
-      "path": "聚合平台 KULAAI / RskAi",
-      "price": "免费额度 → 付费 ¥25-30/月",
-      "note": "Claude Opus 4.5 在聚合平台可直接切换，无需注册 Anthropic 账号",
-      "url": "https://kulaai.cn"
-    },
-    "links": [
-      {"text": "👉 KULAAI 直接切换到 Claude", "url": "https://kulaai.cn", "external": true},
-      {"text": "👉 RskAi（免费额度更多）", "url": "https://rskai.cn", "external": true},
-      {"text": "💻 开发者：Claude Code 配置指南", "url": "/aitools/posts/claude-dev/"}
+    "items": [
+      {"text": "KULAAI 切换到 Claude Opus 4.5", "url": "https://kulaai.cn"},
+      {"text": "RskAi（免费额度更多）", "url": "https://rskai.cn"},
+      {"text": "💻 Claude Code 配置指南", "url": "/aitools/posts/claude-dev/"}
     ]
   },
   {
     "name": "Gemini",
     "icon": "🔮",
-    "desc": "免费额度最大方",
-    "recommend": {
-      "path": "聚合平台免费区 / Google AI Studio",
-      "price": "免费（Gemini Flash 每分钟60次）",
-      "note": "100万token上下文，原生多模态。Flash版在聚合平台完全免费",
-      "url": "https://aistudio.google.com"
-    },
-    "links": [
-      {"text": "👉 Google AI Studio（官方免费，需网络）", "url": "https://aistudio.google.com", "external": true},
-      {"text": "👉 KULAAI 免费区直接用 Gemini Flash", "url": "https://kulaai.cn", "external": true}
+    "desc": "免费额度最大方 · 原生多模态",
+    "items": [
+      {"text": "Google AI Studio（官方·免费API）", "url": "https://aistudio.google.com"},
+      {"text": "KULAAI 免费区 Gemini Flash", "url": "https://kulaai.cn"}
     ]
   },
   {
     "name": "AI 绘画",
     "icon": "🎨",
     "desc": "GPT Image 2 + NanoBanana 2",
-    "recommend": {
-      "path": "聚合平台（GPT Image 2） / imini（NanoBanana 2）",
-      "price": "免费额度 → 付费 ¥10-30/月",
-      "note": "画质天花板 GPT Image 2 在 KULAAI 可用；秒级出图 NanoBanana 2 在 imini 每天免费3次",
-      "url": "https://kulaai.cn"
-    },
-    "links": [
-      {"text": "🎨 GPT Image 2 → KULAAI", "url": "https://kulaai.cn", "external": true},
-      {"text": "🍌 NanoBanana 2 免费 → imini", "url": "https://imini.com/zh/nano-banana", "external": true},
-      {"text": "🍌 更多免费渠道 → LiblibAI", "url": "https://liblib.art", "external": true},
-      {"text": "📖 AI 生图完整教程（提示词+平台对比）", "url": "/aitools/posts/ai-image/"}
+    "items": [
+      {"text": "GPT Image 2 → KULAAI", "url": "https://kulaai.cn"},
+      {"text": "NanoBanana 2 免费 → imini", "url": "https://imini.com/zh/nano-banana"},
+      {"text": "NanoBanana 2 专业 → LiblibAI", "url": "https://liblib.art"},
+      {"text": "📖 AI 生图教程（提示词+对比）", "url": "/aitools/posts/ai-image/"}
     ]
   },
   {
     "name": "ChatGPT 付款",
     "icon": "💳",
-    "desc": "Plus/Pro 国内支付方案",
-    "recommend": {
-      "path": "DGT Store 代充 / Apple 内购",
-      "price": "Plus ¥130-150/月 · Pro ¥1350-1450/月",
-      "note": "不需要海外信用卡。代充 2 分钟搞定，Apple 内购自己操作更安全",
-      "url": "https://dgtsell.com"
-    },
-    "links": [
-      {"text": "👉 代充 → DGT Store", "url": "https://dgtsell.com", "external": true},
-      {"text": "👉 代充 → 银河录像局（最老牌）", "url": "https://yinhe.tv", "external": true},
-      {"text": "📖 不想代充？Apple 礼品卡自己付", "url": "/aitools/posts/chatgpt-payment/"}
+    "desc": "Plus/Pro 国内支付",
+    "items": [
+      {"text": "代充 → DGT Store（¥140/月）", "url": "https://dgtsell.com"},
+      {"text": "代充 → 银河录像局（最老牌）", "url": "https://yinhe.tv"},
+      {"text": "📖 不想代充？Apple 内购教程", "url": "/aitools/posts/chatgpt-payment/"}
     ]
   },
   {
     "name": "开发者",
     "icon": "💻",
-    "desc": "API 接入 · Claude Code",
-    "recommend": {
-      "path": "OpenRouter / Ofox.ai API 中转",
-      "price": "按量计费 · 注册送 ¥5-10 体验金",
-      "note": "一行代码切换国内节点。OpenRouter 覆盖 400+ 模型，支持支付宝",
-      "url": "https://openrouter.ai"
-    },
-    "links": [
-      {"text": "👉 API 中转 → OpenRouter（400+模型）", "url": "https://openrouter.ai", "external": true},
-      {"text": "👉 API 中转 → Ofox.ai（国内优化）", "url": "https://ofox.ai", "external": true},
-      {"text": "📖 Claude Code 安装配置指南", "url": "/aitools/posts/claude-dev/"},
-      {"text": "📖 中转平台比价导航 → openairouter.net", "url": "https://openairouter.net", "external": true}
+    "desc": "API 中转 · 按量计费",
+    "items": [
+      {"text": "OpenRouter（400+模型·支付宝）", "url": "https://openrouter.ai"},
+      {"text": "Ofox.ai（国内优化·中文文档）", "url": "https://ofox.ai"},
+      {"text": "中转比价导航 → openairouter.net", "url": "https://openairouter.net"},
+      {"text": "💻 Claude Code 配置指南", "url": "/aitools/posts/claude-dev/"}
     ]
   }
 ]

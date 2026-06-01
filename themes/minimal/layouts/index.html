@@ -18,20 +18,9 @@
         </div>
       </div>
       <div class="tool-subitems">
-        <div class="tool-recommend">
-          <div class="rec-line"><strong>{{ .recommend.path }}</strong></div>
-          <div class="rec-line rec-price">{{ .recommend.price }}</div>
-          <div class="rec-line rec-note">{{ .recommend.note }}</div>
-        </div>
-        <div class="tool-links">
-          {{ range .links }}
-          {{ if .external }}
-          <a href="{{ .url }}" class="tool-subitem external" target="_blank" rel="noopener">{{ .text }}</a>
-          {{ else }}
-          <a href="{{ .url }}" class="tool-subitem">{{ .text }}</a>
-          {{ end }}
-          {{ end }}
-        </div>
+        {{ range .items }}
+        <a href="{{ .url }}" class="tool-subitem"{{ if hasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}>{{ .text }}</a>
+        {{ end }}
       </div>
     </div>
   {{ end }}
