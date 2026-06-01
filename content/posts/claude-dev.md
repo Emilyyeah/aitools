@@ -1,114 +1,97 @@
 +++
-title = "Claude 开发者指南"
+title = "Claude Code 安装配置指南"
 date = 2026-05-31
 draft = false
-description = "Claude Code命令行编程 + API接入。国内直连方案，从安装到第一条对话。"
+description = "国内直连 Claude Code。中转平台 API Key 配置、安装步骤、常见问题。"
 +++
 
-## Claude 对开发者的价值
+## Claude Code 是什么
 
-Claude（尤其是 Opus 4.5 系列）在代码生成、代码审查、调试推理方面是目前最强之一。Anthropic 还推出了 Claude Code——一个命令行 AI 编程助手，直接在终端里跟你结对编程。
+Anthropic 推出的命令行 AI 编程工具——在终端里直接跟 Claude Opus 4.5 结对编程。能读取你的代码文件、执行命令、编辑文件。
 
 ---
 
-## 方式一：Claude Code（推荐）
-
-Claude Code 是 Anthropic 2025 年底推出的终端 AI 编程工具。比网页版更适合开发者：
-
-- 直接读取你的代码文件
-- 在终端里执行命令、编辑文件
-- 上下文感知整个项目结构
-- 支持 Git 集成
-
-### 安装
+## 安装
 
 ```bash
 npm install -g @anthropic-ai/claude-code
 ```
 
-### 国内直连配置
+---
 
-安装后需要配置 API 接入。因为直接连 Anthropic 官方 API 需要网络环境，国内通常通过中转平台：
+## 国内直连配置
 
-1. 注册一个 API 中转平台（搜索「Claude API 中转」）
-2. 获取 API Key
-3. 设置环境变量：
+Claude Code 默认连 Anthropic 官方 API，国内需要走中转。两步：
+
+### 1. 获取中转平台 API Key
+
+- [OpenRouter](https://openrouter.ai)（400+模型，支持支付宝）
+- [Ofox.ai](https://ofox.ai)（国内优化，中文文档）
+
+注册后在后台生成 API Key。
+
+### 2. 设置环境变量
 
 ```bash
-export ANTHROPIC_API_KEY="你的中转平台key"
-export ANTHROPIC_BASE_URL="https://中转平台地址"
+# OpenRouter 示例
+export ANTHROPIC_API_KEY="sk-or-v1-你的key"
+export ANTHROPIC_BASE_URL="https://openrouter.ai/api/v1"
+
+# Ofox.ai 示例
+export ANTHROPIC_API_KEY="你的ofox key"
+export ANTHROPIC_BASE_URL="https://api.ofox.ai/v1"
 ```
 
-4. 运行 `claude` 启动
-
-### 使用场景
-
-- 「帮我审查这个文件的代码质量」
-- 「这个 bug 可能在哪？帮我定位」
-- 「给这个函数写单元测试」
-- 「重构这段代码，提高可读性」
-
-Claude Code 能直接读写你的文件，效率比复制粘贴到网页版高得多。
+把这两行加到 `~/.zshrc` 或 `~/.bashrc` 里，以后每次启动终端自动生效。
 
 ---
 
-## 方式二：API 接入
+## 启动
 
-和 ChatGPT API 中转一样的模式。Claude 兼容 OpenAI 的接口格式（部分平台），或者使用 Anthropic 原生 SDK。
-
-### 使用 Anthropic SDK
-
-```python
-import anthropic
-
-client = anthropic.Anthropic(
-    api_key="你的中转平台key",
-    base_url="https://中转平台地址"
-)
-
-message = client.messages.create(
-    model="claude-opus-4-5-20251101",
-    max_tokens=4096,
-    messages=[{"role": "user", "content": "Hello, Claude"}]
-)
-print(message.content)
+```bash
+claude
 ```
 
-### 主要模型
+第一次运行会有引导设置。之后在任意项目目录下运行，Claude Code 会自动感知项目结构。
 
-| 模型 | 用途 | 价格 |
+---
+
+## 常用场景
+
+```bash
+# 代码审查
+"审查 src/ 目录的代码质量，列出潜在bug和安全隐患"
+
+# 定位 Bug
+"用户反馈登录后页面白屏，帮我定位原因"
+
+# 写测试
+"给 src/utils/format.ts 写完整的单元测试"
+
+# 重构
+"把这段代码从 class 组件重构为 hooks，保持功能不变"
+```
+
+---
+
+## 费用
+
+走中转平台按量计费：
+
+| 模型 | 输入价格（/1M token） | 输出价格 |
 |:---|:---|:---|
-| Claude Opus 4.5 | 最强推理+代码 | $15/$75 per 1M token |
-| Claude Sonnet 4 | 性价比之选 | $3/$15 per 1M token |
-| Claude Haiku 3.5 | 最快最便宜 | $0.8/$4 per 1M token |
+| Claude Opus 4.5 | ~$15 | ~$75 |
+| Claude Sonnet 4 | ~$3 | ~$15 |
 
-中转平台价格在官方基础上上浮 10-30%。
+日常用 Sonnet 足够了，Opus 只在需要深度推理时用。一个月正常使用，Sonnet 花费约 $5-15。
+
+想先免费体验 Claude？不用装 Claude Code。直接打开 [KULAAI](https://kulaai.cn)，在模型列表里切到 Claude 就能聊。
 
 ---
 
-## 方式三：用 Cursor/Copilot 间接用 Claude
+## 替代方案
 
-如果你用 VS Code：
-
+如果你觉得配置环境麻烦：
+- **Cursor**：付费版内置 Claude 模型，开箱即用
 - **GitHub Copilot**：已支持选择 Claude 作为底层模型
-- **Cursor**：付费版可以选择 Claude Opus
-- 不需要自己配置 API，开箱即用
-- 但需要国际支付订阅这些工具
-
----
-
-## 选择建议
-
-- **写代码为主** → Claude Code，终端体验最好
-- **API 集成到自己的产品** → API 中转 + Anthropic SDK
-- **不想折腾环境** → Cursor/Copilot 选 Claude 模型
-
-<div class="cross-links">
-
-### 你可能还想看
-
-* [不注册，快速体验 Claude](/aitools/posts/claude-try/)
-* [开发者 API 接入指南（ChatGPT）](/aitools/posts/chatgpt-api/)
-* [Claude 和 ChatGPT 对比](/aitools/posts/claude-compare/)
-
-</div>
+- **聚合平台网页版**：[KULAAI](https://kulaai.cn) / [RskAi](https://rskai.cn) 直接切换 Claude 聊天

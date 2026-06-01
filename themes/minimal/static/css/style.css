@@ -34,14 +34,24 @@ a{color:var(--c-primary);text-decoration:none}
 
 /* Sub items - hidden, slide out on hover */
 .tool-subitems{border-top:1px solid var(--c-border);max-height:0;overflow:hidden;opacity:0;transition:max-height .25s ease,opacity .2s ease}
-.tool-card:hover .tool-subitems{max-height:300px;opacity:1}
+.tool-card:hover .tool-subitems{max-height:500px;opacity:1}
 
 /* Touch devices: always show sub-items */
-@media(hover:none){.tool-subitems{max-height:300px;opacity:1}}
+@media(hover:none){.tool-subitems{max-height:500px;opacity:1}}
 .tool-subitem{display:block;padding:12px 24px;font-size:.9rem;color:var(--c-text);transition:all .12s;border-bottom:1px solid #f8fafc}
 .tool-subitem:last-child{border-bottom:none}
 .tool-subitem:hover{background:#f8fafc;color:var(--c-primary);padding-left:28px}
 .tool-subitem::after{content:" →";float:right;color:var(--c-text-lighter)}
+
+/* Recommend block */
+.tool-recommend{padding:16px 24px 8px;font-size:.85rem;line-height:1.6;color:var(--c-text-light)}
+.tool-recommend .rec-line{margin-bottom:4px}
+.tool-recommend .rec-price{color:var(--c-primary);font-weight:600}
+.tool-recommend .rec-note{font-size:.8rem;color:var(--c-text-lighter)}
+
+/* External links */
+.tool-subitem.external::after{content:" ↗";color:var(--c-primary);opacity:.6}
+.tool-links{border-top:1px solid var(--c-border);padding:4px 0}
 
 /* Article */
 .article-container{max-width:760px;margin:0 auto;padding:0 24px}

@@ -2,7 +2,7 @@
 <section class="hero">
   <div class="container">
     <h1>海外AI工具 · 国内使用指南</h1>
-    <p class="subtitle">选工具 → 选你的问题 → 看解决方案</p>
+    <p class="subtitle">不用翻墙 · 不用海外信用卡 · 打开就能用</p>
   </div>
 </section>
 
@@ -18,9 +18,20 @@
         </div>
       </div>
       <div class="tool-subitems">
-        {{ range .items }}
-        <a href="{{ .link }}" class="tool-subitem">{{ .q }}</a>
-        {{ end }}
+        <div class="tool-recommend">
+          <div class="rec-line"><strong>{{ .recommend.path }}</strong></div>
+          <div class="rec-line rec-price">{{ .recommend.price }}</div>
+          <div class="rec-line rec-note">{{ .recommend.note }}</div>
+        </div>
+        <div class="tool-links">
+          {{ range .links }}
+          {{ if .external }}
+          <a href="{{ .url }}" class="tool-subitem external" target="_blank" rel="noopener">{{ .text }}</a>
+          {{ else }}
+          <a href="{{ .url }}" class="tool-subitem">{{ .text }}</a>
+          {{ end }}
+          {{ end }}
+        </div>
       </div>
     </div>
   {{ end }}
