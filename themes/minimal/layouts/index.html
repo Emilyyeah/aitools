@@ -9,20 +9,20 @@
 <section class="container">
   <div class="tools-grid">
   {{ range .Site.Data.tools }}
-    <details class="tool-details">
-      <summary class="tool-summary">
+    <div class="tool-card">
+      <div class="tool-header">
         <span class="tool-icon-wrap">{{ .icon }}</span>
-        <div class="tool-summary-text">
+        <div class="tool-header-text">
           <h3>{{ .name }}</h3>
           <p>{{ .desc }}</p>
         </div>
-      </summary>
+      </div>
       <div class="tool-subitems">
         {{ range .items }}
         <a href="{{ .link }}" class="tool-subitem">{{ .q }}</a>
         {{ end }}
       </div>
-    </details>
+    </div>
   {{ end }}
   </div>
 </section>

@@ -22,20 +22,21 @@ a{color:var(--c-primary);text-decoration:none}
 /* Tool grid */
 .tools-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding-bottom:48px}
 
-/* Details/summary - expandable tool cards */
-.tool-details{background:var(--c-white);border:1px solid var(--c-border);border-radius:var(--radius);overflow:hidden;transition:all .2s}
-.tool-details[open]{border-color:#93c5fd;box-shadow:0 4px 16px rgba(0,0,0,.06)}
-.tool-summary{cursor:pointer;padding:24px;display:flex;align-items:flex-start;gap:16px;list-style:none}
-.tool-summary::-webkit-details-marker{display:none}
-.tool-summary::marker{display:none;content:''}
-.tool-summary:hover{background:#fafbfc}
+/* Tool cards - hover to expand */
+.tool-card{background:var(--c-white);border:1px solid var(--c-border);border-radius:var(--radius);overflow:hidden;transition:all .2s}
+.tool-card:hover{border-color:#93c5fd;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+.tool-header{padding:24px;display:flex;align-items:flex-start;gap:16px}
 .tool-icon-wrap{font-size:2rem;line-height:1;flex-shrink:0;margin-top:2px}
-.tool-summary-text{flex:1;min-width:0}
-.tool-summary h3{font-size:1.05rem;font-weight:700;color:var(--c-text)}
-.tool-summary p{font-size:.85rem;color:var(--c-text-light);line-height:1.55;margin:4px 0 0}
+.tool-header-text{flex:1;min-width:0}
+.tool-header h3{font-size:1.05rem;font-weight:700;color:var(--c-text)}
+.tool-header p{font-size:.85rem;color:var(--c-text-light);line-height:1.55;margin:4px 0 0}
 
-/* Sub items */
-.tool-subitems{border-top:1px solid var(--c-border);padding:4px 0}
+/* Sub items - hidden, slide out on hover */
+.tool-subitems{border-top:1px solid var(--c-border);max-height:0;overflow:hidden;opacity:0;transition:max-height .25s ease,opacity .2s ease}
+.tool-card:hover .tool-subitems{max-height:300px;opacity:1}
+
+/* Touch devices: always show sub-items */
+@media(hover:none){.tool-subitems{max-height:300px;opacity:1}}
 .tool-subitem{display:block;padding:12px 24px;font-size:.9rem;color:var(--c-text);transition:all .12s;border-bottom:1px solid #f8fafc}
 .tool-subitem:last-child{border-bottom:none}
 .tool-subitem:hover{background:#f8fafc;color:var(--c-primary);padding-left:28px}
